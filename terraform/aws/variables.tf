@@ -3,3 +3,9 @@ variable "instance_name" {
   type        = string
   default     = "AppServerInstance"
 }
+
+variable "security_group_name" {
+  description = "Value of the name tag for Security group"
+  type        = string
+  default     = "SecurityGroup"
+}
