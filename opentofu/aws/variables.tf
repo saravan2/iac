@@ -9,3 +9,15 @@ variable "security_group_name" {
   type        = string
   default     = "SecurityGroup"
 }
+
+variable "aws_ssm_parameter_ami" {
+  description = "ami used for ec2 instance"
+  type        = string
+  default     = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
+}
+
+variable "aws_region" {
+  description = "aws region"
+  type        = string
+  default     = "us-east-1"
+}

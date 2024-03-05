@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
 
 resource "aws_security_group" "security_group" {
@@ -57,5 +57,5 @@ resource "aws_instance" "app_server" {
 }
 
 data "aws_ssm_parameter" "ami" {
-  name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
+  name = var.aws_ssm_parameter_ami_name
 }
